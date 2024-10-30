@@ -1,0 +1,94 @@
+/* Set up body styling */
+body {
+    width: 600px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #ffdfcd;
+    font-family: Arial, sans-serif;
+}
+
+/* Background color for the entire window */
+html {
+    background-color: white;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+    text-align: center;
+    padding: 1em 2em;
+    border-bottom: 3px solid #931420;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Main content styling */
+main {
+    padding: 0 30px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 1.5em;
+}
+
+h2 {
+    border-top: 3px solid #931420;
+    border-bottom: 3px solid #931420;
+    padding: 0.5em;
+}
+
+/* Ticket package styling */
+ul {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+
+/* Speaker styling */
+.speaker {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.speaker img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+}
+
+/* Blockquote styling */
+blockquote {
+    font-style: italic;
+}
+
+/* Footer styling */
+footer {
+    background-color: #931420;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    border-top: 3px solid #931420;
+}
+
+/* Additional padding adjustments */
+header, h1, h2 {
+    padding: 1.5em 2em;
+}
+
+h1, h2 {
+    text-indent: 0;
+}
+
+/* Rounded corners and shadow for speakers section */
+h2 {
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
