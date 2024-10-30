@@ -1,3 +1,10 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Set up body styling */
 body {
     width: 600px;
@@ -5,6 +12,8 @@ body {
     border: 3px solid #931420;
     background-color: #ffdfcd;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Background color for the entire window */
@@ -16,17 +25,27 @@ html {
 header {
     background: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
     text-align: center;
-    padding: 1em 2em;
+    padding: 20px;
     border-bottom: 3px solid #931420;
 }
 
-header h1 {
-    margin: 0;
+header img {
+    display: block;
+    margin: 0 auto 10px;
 }
 
-header p {
-    font-weight: bold;
+header h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+header h3 {
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Main content styling */
@@ -34,39 +53,65 @@ main {
     padding: 0 30px;
 }
 
-/* Section styling */
-section {
-    margin-bottom: 1.5em;
-}
-
-h2 {
+/* Section headings */
+h1, h2 {
     border-top: 3px solid #931420;
     border-bottom: 3px solid #931420;
     padding: 0.5em;
+    margin-top: 20px;
+    color: #931420;
 }
 
-/* Ticket package styling */
-ul {
-    list-style: disc;
-    padding-left: 1.5em;
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Speaker styling */
-.speaker {
-    display: flex;
-    align-items: center;
+/* Paragraph and blockquote styling */
+p {
     margin-bottom: 1em;
 }
 
-.speaker img {
-    width: 50px;
-    height: 50px;
-    margin-right: 1em;
-}
-
-/* Blockquote styling */
 blockquote {
     font-style: italic;
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid #931420;
+    color: #555;
+}
+
+/* List styling for ticket packages */
+ul {
+    list-style: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Speaker section styling */
+h3 {
+    font-size: 1.2em;
+    color: #931420;
+    margin-top: 1em;
+}
+
+main img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 2px solid #931420;
+}
+
+/* Link styling */
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Footer styling */
@@ -76,19 +121,15 @@ footer {
     text-align: center;
     padding: 1em;
     border-top: 3px solid #931420;
+    margin-top: 20px;
 }
 
-/* Additional padding adjustments */
+/* Padding adjustments for header, main elements */
 header, h1, h2 {
-    padding: 1.5em 2em;
+    padding: 1em;
 }
 
-h1, h2 {
-    text-indent: 0;
-}
-
-/* Rounded corners and shadow for speakers section */
-h2 {
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+/* Overall layout padding */
+header, main, footer {
+    padding: 0 30px;
 }
