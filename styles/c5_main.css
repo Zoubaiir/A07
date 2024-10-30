@@ -1,3 +1,12 @@
+/* Custom property */
+:root {
+    --global-color-1: #800000;
+    --border-color: #931420;
+    --background-color: #ffdfcd;
+    --header-gradient-start: #f6bb73;
+    --header-gradient-end: #f6bb73;
+}
+
 /* Reset default margins and padding */
 * {
     margin: 0;
@@ -5,13 +14,14 @@
     box-sizing: border-box;
 }
 
-/* Set up body styling */
+/* Body styling */
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
     width: 600px;
     margin: 0 auto;
-    border: 3px solid #931420;
-    background-color: #ffdfcd;
-    font-family: Arial, sans-serif;
+    border: 3px solid var(--border-color);
+    background-color: var(--background-color);
     line-height: 1.6;
     color: #333;
 }
@@ -21,115 +31,118 @@ html {
     background-color: white;
 }
 
+/* Link styling */
+a:focus, a:hover {
+    font-style: italic;
+}
+
 /* Header styling */
 header {
-    background: linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
-    text-align: center;
+    background: linear-gradient(30deg, var(--header-gradient-start) 0%, var(--header-gradient-end) 30%, white 50%, var(--header-gradient-start) 80%, var(--header-gradient-end) 100%);
     padding: 20px;
-    border-bottom: 3px solid #931420;
+    border-bottom: 3px solid var(--border-color);
+    text-align: center;
 }
 
 header img {
-    display: block;
-    margin: 0 auto 10px;
+    float: left;
+    margin-right: 20px;
+    height: 80px;
 }
 
 header h2 {
-    font-size: 1.8em;
+    font-size: 1.75em;
+    color: var(--global-color-1);
+    text-indent: 30px;
     margin-bottom: 5px;
 }
 
 header h3 {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.3em;
+    font-style: italic;
+    text-indent: 30px;
 }
 
 .shadow {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px var(--global-color-1);
 }
 
 /* Main content styling */
 main {
+    clear: left;
     padding: 0 30px;
 }
 
-/* Section headings */
-h1, h2 {
-    border-top: 3px solid #931420;
-    border-bottom: 3px solid #931420;
-    padding: 0.5em;
-    margin-top: 20px;
-    color: #931420;
-}
-
-h1 {
+/* Main section headings */
+main h1 {
     font-size: 1.5em;
+    padding: 0.3em 0;
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
     text-align: center;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: var(--global-color-1);
 }
 
-/* Paragraph and blockquote styling */
-p {
-    margin-bottom: 1em;
+main h2 {
+    font-size: 1.3em;
+    padding: 0.5em 0 0.25em;
+    color: var(--global-color-1);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
 }
 
-blockquote {
+main h3 {
+    font-size: 1.05em;
+    color: var(--global-color-1);
+    padding-bottom: 0.25em;
+}
+
+main p {
+    padding-bottom: 0.5em;
+}
+
+main blockquote {
+    padding: 0 2em;
     font-style: italic;
     margin: 1em 0;
-    padding-left: 1em;
-    border-left: 3px solid #931420;
     color: #555;
+    border-left: 3px solid var(--border-color);
 }
 
-/* List styling for ticket packages */
-ul {
-    list-style: disc;
-    padding-left: 1.5em;
+main ul {
+    padding: 0 0 0.25em 1.25em;
     margin-bottom: 1em;
 }
 
-/* Speaker section styling */
-h3 {
-    font-size: 1.2em;
-    color: #931420;
-    margin-top: 1em;
+main li {
+    padding-bottom: 0.35em;
 }
 
 main img {
+    padding-bottom: 1em;
     width: 75px;
     height: 75px;
-    margin-bottom: 1em;
     border-radius: 5px;
-    border: 2px solid #931420;
-}
-
-/* Link styling */
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    border: 2px solid var(--border-color);
 }
 
 /* Footer styling */
 footer {
-    background-color: #931420;
+    background-color: var(--global-color-1);
     color: white;
     text-align: center;
-    padding: 1em;
-    border-top: 3px solid #931420;
+    padding: 1em 0;
     margin-top: 20px;
+    border-top: 3px solid var(--border-color);
+}
+
+footer p {
+    padding: 1em 0;
 }
 
 /* Padding adjustments for header, main elements */
 header, h1, h2 {
     padding: 1em;
-}
-
-/* Overall layout padding */
-header, main, footer {
-    padding: 0 30px;
 }
